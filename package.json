@@ -1,0 +1,19 @@
+{
+  "name": "doodles",
+  "version": "0.0.1",
+  "description": "A universal graphic system.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/akira-cn/doodles.git"
+  },
+  "author": "akira-cn",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/akira-cn/doodles/issues"
+  },
+  "homepage": "https://github.com/akira-cn/doodles#readme"
+}
