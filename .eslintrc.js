@@ -1,13 +1,29 @@
 module.exports = {
-    parser: '@typescript-eslint/parser',
-    plugins: ['@typescript-eslint', 'html'],
-    rules: {
-        // 禁止使用 var
-        'no-var': "error",
-        // 优先使用 interface 而不是 type
-        '@typescript-eslint/consistent-type-definitions': [
-            "error",
-            "interface"
-        ]
-    }
+    globals: {
+        doodles: true,
+    },
+    plugins: ['html'],
+    extends:  "eslint-config-sprite",
+    overrides: [{
+        parser: '@typescript-eslint/parser',
+        parserOptions: {
+            ecmaVersion: 6,//也就是ES6语法支持的意思
+            sourceType: "module",
+            ecmaFeatures: {
+                "modules": true
+            },
+            project: "./tsconfig.json"
+        },
+        files: ["**/*.ts", "**/*.tsx"],
+        plugins: ['@typescript-eslint'],
+        rules: {
+            // 禁止使用 var
+            'no-var': "error",
+            // 优先使用 interface 而不是 type
+            '@typescript-eslint/consistent-type-definitions': [
+                "error",
+                "interface"
+            ]
+        }
+    }],
 }

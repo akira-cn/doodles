@@ -7,6 +7,26 @@
   <title>Document</title>
 </head>
 <body>
+  <canvas width="512" height="512"></canvas>
   <script src="/js/doodles.js"></script>
+  <script>
+    const {pen, put, right, forward, render, canvasParser} = doodles;
+    const mode = 'points';
+    pen(10, 'black', mode);
+    put(0, 0);
+    forward(0.5);
+    right(90);
+    pen(20, 'red', mode);
+    forward(0.5);
+    right(90);
+    pen(30, 'blue', mode);
+    forward(0.5);
+    right(90);
+    pen(40, 'green', mode);
+    forward(0.5);
+
+    const canvas = document.querySelector('canvas');
+    render(canvasParser(canvas));
+  </script>
 </body>
 </html>

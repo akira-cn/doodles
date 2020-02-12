@@ -23,7 +23,7 @@ module.exports = function (env = {}) {
       path: path.resolve(__dirname, 'dist'),
       filename: 'doodles.js',
       publicPath: '/js/',
-      library: ['doodle'],
+      library: ['doodles'],
       libraryTarget: 'umd',
       // libraryExport: 'default',
       globalObject: 'this',
